@@ -35,7 +35,7 @@ const getCityCoordinates= () => {
     }
 
     const getweatherDetail = (cityName, lat, lon) => {
-        Weather_url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_key}`;
+        Weather_url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_key}`;
         fetch(Weather_url).then(res=>res.json()).then(data=>{
         
             const uniqueForecastDays =[];
@@ -103,4 +103,5 @@ const getUserCoordinates = () =>{
 
 locationButton.addEventListener("click",getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
+
 cityInput.addEventListener("keyup",e => e.key ==="Enter" && getCityCoordinates());
