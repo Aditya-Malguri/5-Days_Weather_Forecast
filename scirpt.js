@@ -3,7 +3,8 @@ const locationButton = document.querySelector(".location-btn");
 const cityInput = document.querySelector(".city-input");
 const currentWeatherDIV = document.querySelector(".current-weather");
 const weathercardsDIV = document.querySelector(".weather-card");
-const API_key = "a66925d8c745619a308aea567ba97aa0";
+const API_key = "ceeda7fc93f6dd7ea0c7f78c23ffea2f";
+
 
 const getCityCoordinates = () => {
     const cityName = cityInput.value.trim();
@@ -91,3 +92,4 @@ const getUserCoordinates = () => {
 locationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
+
